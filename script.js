@@ -8,7 +8,7 @@ function showSuggestions() {
     let sug = document.getElementById('suggesions')
     sug.innerHTML = '';
     let ip = document.getElementById('searchProf').value;
-    if(ip = '') {
+    if(ip === '') {
         suggesions.style.display = 'none';
         return;
     }
@@ -19,6 +19,11 @@ function showSuggestions() {
         sug.appendChild(opt);
         opt.style.cursor = 'pointer';
         opt.style.padding = '1px';
+        opt.onclick = function() {
+            let k = String(i);
+            let name = "mentor" + k;
+            window.location.href = '#'+name;
+        }
     }
     suggesions.style.display = 'block';
 }
