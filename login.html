@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="logstyles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <div id="roleSelection">
+            <label>
+                <input type="radio" name="role" value="student" onclick="showStudentForm()"> Student
+            </label>
+            <label>
+                <input type="radio" name="role" value="teacher" onclick="showTeacherForm()"> Teacher
+            </label>
+        </div>
+
+        <div id="formContainer" style="display: none;">
+            <form id="loginForm">
+                <div id="commonFields">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" required>
+
+                    <label>
+                        <input type="checkbox" id="terms" required> I agree to the terms of service
+                    </label>
+                </div>
+
+                <div id="studentFields" style="display: none;">
+                    <label for="regNumber">Registration Number:</label>
+                    <input type="text" id="regNumber" required>
+
+                    <label for="course">Course:</label>
+                    <input type="text" id="course" required>
+                </div>
+
+                <div id="teacherFields" style="display: none;">
+                    <label for="facultyRegNumber">Faculty Registration Number:</label>
+                    <input type="text" id="facultyRegNumber" required>
+
+                    <label for="qualification">Qualification:</label>
+                    <input type="text" id="qualification" required>
+
+                    <label for="subjects">Subjects You Can Teach:</label>
+                    <input type="text" id="subjects" required>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="logscript.js"></script>
+</body>
+</html>
